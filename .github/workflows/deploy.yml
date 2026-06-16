@@ -1,0 +1,31 @@
+name: Deploy LFS to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change this to 'master' if your main branch is named master
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code with LFS
+        uses: actions/checkout@v4
+        with:
+          lfs: true # This forces GitHub to pull the actual large files, not pointers
+
+      - name: Clean Git Hooks
+        run: |
+          git lfs uninstall
+          rm -rf .git
+          rm -f .gitattributes
+
+      - name: Deploy to GitHub Pages Branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: gh-pages # Deploys a clean copy here
