@@ -17,11 +17,9 @@ jobs:
         with:
           lfs: true # This forces GitHub to pull the actual large files, not pointers
 
-      - name: Prep Files for Pages Deployment
+      - name: Clean Git Hooks
         run: |
-          # Uninstall hooks but DO NOT delete the .git folder
           git lfs uninstall
-          # Remove the tracking file so GitHub Pages doesn't try to parse it
           rm -f .gitattributes
 
       - name: Deploy to GitHub Pages Branch
@@ -30,3 +28,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
           publish_branch: gh-pages
+          force_orphan: true # This wipes history conflicts and forces a clean page push
