@@ -5,27 +5,37 @@ on:
     branches:
       - main
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps: deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code with LFS
         uses: actions/checkout@v4
         with:
-          lfs: true # This forces GitHub to pull the actual large files, not pointers
+          lfs: true # Pulls the real 236MB file
 
-      - name: Clean Git Hooks
-        run: |
-          git lfs uninstall
-          rm -f .gitattributes
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-      - name: Deploy to GitHub Pages Branch
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          publish_branch: gh-pages
-          force_orphan: true # This wipes history conflicts and forces a clean page push
+          path: '.' # Packages your whole folder directly into a web tarball
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # Officially streams the bundle straight to Pages without Git conflicts
