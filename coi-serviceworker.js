@@ -1,3 +1,13 @@
+// Add or replace at the very top of your coi-serviceworker.js file:
+self.coi = {
+    shouldCatch: (request) => {
+        // Do not intercept or block game data or webassembly components
+        if (request.url.includes('.pck') || request.url.includes('.wasm')) {
+            return false;
+        }
+        return true;
+    }
+};
 /*! coi-serviceworker v0.1.7 - Guido Zuidhof and contributors, licensed under MIT */
 let coepCredentialless = false;
 if (typeof window === 'undefined') {
