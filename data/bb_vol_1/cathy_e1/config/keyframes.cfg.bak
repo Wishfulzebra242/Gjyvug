@@ -1,0 +1,148 @@
+[main]
+
+data={
+"background": [],
+"camera": [{
+"position": Vector2(0, 0),
+"scale": Vector2(1, 1),
+"speed": 0.5,
+"timestamp": 0.0
+}, {
+"position": Vector2(-40, 100),
+"scale": Vector2(1.6, 1.6),
+"speed": 0.5,
+"timestamp": 15.2381
+}, {
+"position": Vector2(0, 0),
+"scale": Vector2(1, 1),
+"speed": 0.5,
+"timestamp": 29.5238
+}, {
+"position": Vector2(-80, 50),
+"scale": Vector2(1.6, 1.6),
+"speed": 0.5,
+"timestamp": 38.0952
+}, {
+"position": Vector2(0, 0),
+"scale": Vector2(1, 1),
+"speed": 0.5,
+"timestamp": 43.8095
+}, {
+"position": Vector2(-170, 0),
+"scale": Vector2(1.7, 1.7),
+"speed": 0.5,
+"timestamp": 60.9524
+}, {
+"position": Vector2(0, 0),
+"scale": Vector2(1, 1),
+"speed": 0.5,
+"timestamp": 75.7143
+}],
+"effects": [],
+"loops": [{
+"animations": {
+"normal": "cathy_e1_headlick.png"
+},
+"sheet_data": {
+"h": 2,
+"total": 6,
+"v": 3
+},
+"timestamp": 0.0
+}, {
+"animations": {
+"normal": "cathy_foreskin.png"
+},
+"sheet_data": {
+"h": 2,
+"total": 6,
+"v": 3
+},
+"timestamp": 30.4762
+}, {
+"animations": {
+"normal": "cathy_throat.png"
+},
+"sheet_data": {
+"h": 2,
+"total": 6,
+"v": 3
+},
+"timestamp": 45.7143
+}, {
+"animations": {
+"normal": "cathy_rimming.png"
+},
+"sheet_data": {
+"h": 2,
+"total": 6,
+"v": 3
+},
+"timestamp": 76.1905
+}, {
+"animations": {
+"normal": "cathy_anal.png"
+},
+"sheet_data": {
+"h": 2,
+"total": 6,
+"v": 3
+},
+"timestamp": 106.667
+}],
+"modifiers": [{
+"bpm": 126.0,
+"timestamp": 0.0
+}],
+"shutter": [{
+"timestamp": 30.476
+}, {
+"timestamp": 45.714
+}, {
+"timestamp": 76.1902
+}, {
+"timestamp": 106.667
+}, {
+"timestamp": 152.381
+}],
+"sound_loop": [{
+"path": ["sfx_lick_1.ogg", "sfx_lick_2.ogg", "sfx_lick_3.ogg", "sfx_lick_4.ogg", "sfx_lick_5.ogg"],
+"timestamp": 0
+}, {
+"path": "sfx_lick2.ogg",
+"timestamp": 76.1902
+}, {
+"path": "sfx_plap.ogg",
+"timestamp": 106.667
+}],
+"sound_oneshot": [{
+"path": "sfx_shutter.ogg",
+"timestamp": 30.476
+}, {
+"path": "sfx_shutter.ogg",
+"timestamp": 45.714
+}, {
+"path": "sfx_shutter.ogg",
+"timestamp": 76.1902
+}, {
+"path": "sfx_shutter.ogg",
+"timestamp": 106.667
+}, {
+"path": "sfx_shutter.ogg",
+"timestamp": 152.381
+}],
+"video": [{
+"path": "vol_1_cathy_climax.ogv",
+"timestamp": 152.381
+}],
+"voice_bank": [{
+"timestamp": 30.47619047619047,
+"voice_paths": ["cathy_lick_1.ogg", "cathy_lick_2.ogg", "cathy_lick_3.ogg", "cathy_lick_4.ogg", "cathy_lick_5.ogg", "cathy_lick_6.ogg", "cathy_lick_7.ogg", "cathy_lick_8.ogg", "cathy_lick_9.ogg", "cathy_lick_10.ogg"]
+}, {
+"timestamp": 45.71428571428571,
+"voice_paths": ["cathy_suck_2.ogg", "cathy_suck_3.ogg", "cathy_suck_4.ogg", "cathy_suck_5.ogg", "cathy_suck_6.ogg"]
+}, {
+"timestamp": 76.19047619047619,
+"voice_paths": ["cathy_moan_closed_2.ogg", "cathy_moan_closed_6.ogg", "cathy_moan_closed_8.ogg", "cathy_moan_closed_9.ogg", "cathy_moan_closed_10.ogg"]
+}]
+}

@@ -1,0 +1,12 @@
+[main]
+
+data={
+"character": "cathy",
+"color": Color(0.3098, 0.27843, 0.32157, 1),
+"coming_soon": false,
+"level_enum": 507,
+"level_id": "46a145b3562b7c6225f4bf4a904826db",
+"level_index": 1,
+"level_name": "In The Dorms",
+"level_prereq": 506
+}
